@@ -1,0 +1,39 @@
+import { AnimatedName } from '../animated-name.tsx';
+import Image from 'next/image';
+import poster from './cs-symposium-poster.jpg';
+import cover from './background.jpg';
+
+export const metadata = {
+  title: 'Legislative Mapping',
+  description:
+    'Our goal is to build a scorecard to evaluate U.S. bills about AI and automated decision-making (ADS)',
+  alternates: {
+    canonical: '/n/legislative-mapping',
+  },
+};
+
+# Legislative Mapping
+
+<AnimatedName />
+
+
+<div className="border border-gray-200  rounded-md p-4">
+  <Image src={cover} alt="Cover Image" className="w-60ch h-30 object-cover"/>
+</div>
+
+## Overview
+
+- Since January 2024, I have been working on the "Legislative Mapping" project under the supervision of Prof. Suresh Venkatasubramanian at the [CNTR](https://cntr.brown.edu/). 
+- Our goal is to build a scorecard to evaluate U.S. bills about AI and automated decision-making (ADS).
+- We won the **Audience Favorite award** at the **2024 Brown CS Research Symposium**. 
+
+Read our [poster](/cs-symposiump-poster.pdf) here:
+
+<div className="border border-gray-200  rounded-md p-4">
+  <Image src={poster} alt="CS Symposium Poster" />
+</div>
+
+## Our Progress
+
+- Our team leads recently published an [overview](https://cntr.substack.com/p/seeking-harmony-in-ai-governance) of proposed AI legislation across all 50 states. We’ve identified 610 AI-related bills, and 114 bills that would regulate state governments’ use of AI. 
+- We recently expanded our collaboration with [Plural Policy](https://pluralpolicy.com/blog/cntr-brown-plural/). 

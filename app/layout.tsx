@@ -28,6 +28,7 @@ export default function RootLayout({
       <html lang="en" className={`${inter.className}`}>
         <body className="antialiased tracking-tight">
           <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 bg-white text-gray-900">
+            {/* <Header /> */}
             <main className="max-w-[60ch] mx-auto w-full space-y-6">
               {children}
             </main>
@@ -40,12 +41,35 @@ export default function RootLayout({
   );
 }
 
+function Header() {
+  const navItems = [
+    { name: "Intro", href: "#intro" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
+  ];
+
+  return (
+    <header className="py-4">
+      <nav className="flex justify-center space-x-6">
+        {navItems.map((item) => (
+          <a
+            key={item.name}
+            href={item.href}
+            className="text-gray-600 hover:text-blue-500 transition-colors duration-200"
+          >
+            {item.name}
+          </a>
+        ))}
+      </nav>
+    </header>
+  );
+}
+
 function Footer() {
   const links = [
-    { name: '@leerob', url: 'https://x.com/leeerob' },
-    { name: 'youtube', url: 'https://www.youtube.com/@leerob' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/leeerob' },
-    { name: 'github', url: 'https://github.com/leerob' },
+    { name: "linkedin", url: "https://www.linkedin.com/in/nora-y-cai/" },
+    { name: "email", url: "mailto:nora.y.caii@gmail.com" },
+    { name: "github", url: "https://github.com/ncai25" },
   ];
 
   return (

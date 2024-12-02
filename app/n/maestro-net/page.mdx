@@ -1,0 +1,39 @@
+import { AnimatedName } from '../animated-name.tsx';
+import Image from 'next/image';
+import cover from './cover-image.jpg';
+import poster from './dl-poster.pdf';
+
+export const metadata = {
+  title: 'Legislative Mapping',
+  description:
+    'Our goal is to build a scorecard to evaluate U.S. bills about AI and automated decision-making (ADS)',
+  alternates: {
+    canonical: '/n/legislative-mapping',
+  },
+};
+
+# MaestroNet
+
+<AnimatedName />
+
+<div className="border border-gray-200  rounded-md p-4">
+  <Image src={cover} alt="Cover Image" className="w-60ch h-30 object-cover" />
+</div>
+
+## Overview
+
+- As a group of 4, we developed a music transcription deep learning model through seq2seq techniques. 
+- We trained a **transformer** model to convert WAV audio files into MIDI files. 
+- Read our [poster](/dl-poster.pdf) here.
+
+## Data
+
+- **Dataset**: The [Saarland Piano Dataset](https://resources.mpi-inf.mpg.de/SMD/SMD_MIDI-Audio-Piano-Music.html) contains paired .mp3 and .midi files of 50 performances, containing 0.15 million notes. We decided to split the dataset into 80/10/10 percent for our train/validation/test data respectively. 
+- **Preprocessing**: We decoded the .mp3 into .wav using LAME and computed a constant-Q spectrogram using the .wav files. We chose to use constant-Q spectrograms over MEL spectrograms, which were also commonly used in other automatic music transcription projects, since they provide a constant frequency resolution over high and low frequencies and a more accurate representation of musical pitches. We converted the .midi files into binary pianorolls using PrettyMidi.
+- **Normalization**: Since all the performances in the dataset were of varying length, we chose to standardize the inputs and labels by splitting the performances into 5-second segments. To do this, we determined the number of spectrogram frames and pianoroll frames that corresponded to a 5-second interval of time and padded each spectrogram and pianoroll.
+
+## Methodology
+
+- **Architecture**: We used a standard transformer-based seq-to-seq model. After preprocessing, our model took the spectrogram of .wav files as input, and output the estimation of music notes for each time frame in the form of midi files, i.e. digitally transcribed music.
+- **Why Transformer**: We chose the transformer for its strength at sequence-to-sequence modeling compared to over models commonly used audio transcription such as RNN. Firstly, the transformer model can store context indefinitely and choose which parts of its inputs to pay attention to, which is particularly helpful for dealing with classical music as it often contains rich structure and recurring motifs. Secondly, we believed that the transformer memory would help us  model the well-attested forms (e.g. sonata, fugue, and toccata) of classical music.
+- **Model**: Since transformers can be very training-intensive, we decided to use a small model of 6 encoder and 6 decoder blocks, and each block had between 4-8 attention heads. This design not only ensured a reasonable and manageable training time, but also was intended for a better use of machine translation. As our data were .wav and MIDI files, which have different characteristics compared to text-based data, the attention heads didn’t need to attend to as many different subspaces. By limiting the number of attention heads, we hoped to gain specialization in attending to relevant features with more effective translations with fewer hyperparameters.
