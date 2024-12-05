@@ -1,0 +1,20 @@
+import { AnimatedName } from '../animated-name.tsx';
+import Image from 'next/image';
+import cover from './noise-cover.png';
+
+export const metadata = {
+  title: 'Noise',
+  description:
+    '2024 Hack at Brown project',
+  alternates: {
+    canonical: '/n/noise',
+  },
+};
+
+# Noise
+
+<AnimatedName />
+
+<div className="border border-gray-200  rounded-md p-4">
+  <Image src={cover} alt="Cover Image" className="w-60ch h-30 object-cover" />
+</div>
