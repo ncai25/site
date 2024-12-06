@@ -1,6 +1,7 @@
 import { AnimatedName } from '../animated-name.tsx';
 import Image from 'next/image';
-import cover from './noise-cover.png';
+import noise1 from './noise-demo.jpg';
+import noise2 from './noise-demo2.jpg';
 
 export const metadata = {
   title: 'Noise',
@@ -15,6 +16,18 @@ export const metadata = {
 
 <AnimatedName />
 
+
+At [Hack@Brown 2024](https://2024.hackatbrown.org/), we prototyped a mobile widget UI and dynamic wallpaper using Figma, targeting screen-time reduction through visualization.
+
+
+- Check out our project on [Devpost](https://devpost.com/software/noise-b31ews).
+- Download our visual design [here](/noise-design.pdf).
+
 <div className="border border-gray-200  rounded-md p-4">
-  <Image src={cover} alt="Cover Image" className="w-60ch h-30 object-cover" />
+  <Image src={noise1} alt="Offshore Issue 1" />
+</div>
+
+
+<div className="border border-gray-200  rounded-md p-4">
+  <Image src={noise2} alt="Offshore Issue 1" />
 </div>

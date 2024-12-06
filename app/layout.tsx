@@ -68,7 +68,7 @@ function Header() {
 function Footer() {
   const links = [
     { name: "linkedin", url: "https://www.linkedin.com/in/nora-y-cai/" },
-    { name: "email", url: "mailto:nora.y.caii@gmail.com" },
+    { name: "email", url: "mailto:nora.y.cai@gmail.com" },
     { name: "github", url: "https://github.com/ncai25" },
   ];
 
