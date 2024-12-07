@@ -1,4 +1,14 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fleerob%2Fsite)
+# site
+
+This is my personal website, forked and customized from [Lee Robinson](https://github.com/leerob/site)’s repository. 
+
+Website address: https://nora-cai.vercel.app/
+
+It showcases my projects, writing pieces, and more. Built with Next.js, Tailwind CSS, and MDX, and deployed on Vercel.
+
+Feel free to explore and adapt! 
+
+<!-- [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fleerob%2Fsite)
 
 # site
 
@@ -39,4 +49,4 @@ CREATE TABLE redirects (
 2. Please do not copy it directly.
 3. Crediting the author is appreciated.
 
-Please remove all of my personal information by running `bun run delete`.
+Please remove all of my personal information by running `bun run delete`. -->
