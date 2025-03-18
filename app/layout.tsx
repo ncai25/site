@@ -70,6 +70,7 @@ function Footer() {
     { name: "linkedin", url: "https://www.linkedin.com/in/nora-y-cai/" },
     { name: "email", url: "mailto:nora.y.cai@gmail.com" },
     { name: "github", url: "https://github.com/ncai25" },
+    { name: "resume", url: "/Nora_Yinuo_Cai_resume.pdf" },
   ];
 
   return (
